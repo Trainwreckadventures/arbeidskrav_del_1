@@ -7,3 +7,5 @@ function Button({ onClick, text, className, ...props }) {
     </button>
   );
 }
+
+export default Button;
