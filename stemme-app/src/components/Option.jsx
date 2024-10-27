@@ -1,44 +1,41 @@
-//is this  good idea or am I just trashing around here....
-//grow bigger brain asap!
 import { useState } from "react";
-import {
-  UpVote,
-  DownVote,
-  AddButton,
-  DeleteButton,
-  EditButton,
-} from "./Buttons.jsx";
+import Button from "./Buttons.jsx";
 
-function CandidateOption() {
-  const [name, setName] = useState("Knut Potetmos");
+function CandidateOption({ candidate, onVote, onDelete, onEdit }) {
   const [isEditing, setIsEditing] = useState(false);
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
+  const [name, setName] = useState(candidate.name);
 
-  const toggleEditMode = () => {
-    setIsEditing(!isEditing);
+  const toggleEditMode = () => setIsEditing(!isEditing);
+
+  const handleNameChange = (event) => setName(event.target.value);
+
+  const saveEdit = () => {
+    onEdit(candidate.id, name);
+    setIsEditing(false);
   };
 
   return (
     <div>
       {isEditing ? (
         <div>
-          <input type="text" value={name} onChange={handleNameChange} />
-          <button onClick={toggleEditMode}>Lagre</button>
+          <input
+            type="text"
+            value={name}
+            onChange={handleNameChange}
+            placeholder="Skriv inn nytt navn her!"
+          />
+          <Button onClick={saveEdit} text="Lagre" />
         </div>
       ) : (
         <div>
-          <p>Navn: {name}</p>
-          <button onClick={toggleEditMode}>Endre navn</button>
+          <p>{candidate.name}</p>
+          <Button onClick={toggleEditMode} text="Endre navn" />
         </div>
       )}
+      <Button onClick={() => onVote(candidate.id, "up")} text="Stemmer opp" />
+      <Button onClick={() => onVote(candidate.id, "down")} text="Stemmer ned" />
 
-      <UpVote />
-      <DownVote />
-      <DeleteButton />
-      <AddButton />
-      <EditButton />
+      <Button onClick={() => onDelete(candidate.id)} text="Sletter" />
     </div>
   );
 }
