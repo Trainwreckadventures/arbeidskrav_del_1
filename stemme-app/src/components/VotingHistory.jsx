@@ -1,9 +1,9 @@
-import rReact from "react";
-
+//Stemmehistorikken for kandidatene våre
+//kan med fordel styles litt penere om det blir tid:
 function VotingHistory({ candidates }) {
   return (
     <div>
-      <h2>Stemme Arkiv</h2>
+      <h2>Stemmehistorikk:</h2>
       <ul>
         {candidates.map((candidate) => (
           <li key={candidate.id}>
