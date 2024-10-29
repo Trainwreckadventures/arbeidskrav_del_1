@@ -20,10 +20,15 @@ Jeg har endret minimalt i index.css som fulgte med, der endret jeg bare på farg
 
 Jeg valgte å legge inn noen kandidater slik at appen ikke så så tom ut, disse kan endres og slettes, men om siden refreshes så tilbakestilles alt til original tillstand.
 
+Desverre rakk jeg ikke å legge til bilder, men tanken var aat kandidatene skulle ha et lite foto ved navnet sitt.
+Navnet til kandidatene kunne også blitt stylet på en litt tydeligere måte/fått litt større font. Nå var det jo ikke visuelt pirk denne oppgaven handlet om, men greit å få med at jeg hadde litt større ambisjoner enn det jeg rakk å utføre.
+
 Jeg hadde lyst til å legge stemmetelleren til hver kandidat istedenfor i en liste nederst på siden, men jeg tenker at det er en nice to have istedenfor en need to have også kan jeg implementere det om jeg får tid. It's not exactly a visual feast that's for sure...
 
+Jeg har forsøkt å implementere litt errorhåndtering også (men skulle gjerne rukket å legge inn mer gjennomgående håndering i filene), selv om appen ser ut til å fungere greit, så har jeg ikke rukket å teste den altfor hardt: det er mye mulig den har en del barnesykdommer jeg ikke er klar over.
+
 Ting jeg har lært:
-For å kommentere her bruker vi en miks av disse: {} // /\*\*/
+For å kommentere her bruker vi en miks av disse: {} // (slash, stjerne, stjerne, slash også men det får jeg ikke skrive her)
 (jeg prøver fremdeles å liste ut hva jeg skal kommentere inn hvor).
 
 Hva er UseState?
@@ -51,10 +56,11 @@ Når bruker vi camelCase?
 Prop-overføring gjør det mulig for komponenter å dele data og funksjonalitet.
 
 Etterord:
+
 Jeg må ærlig innrømme at uten hjelp og støtte fra chat gpt så hadde jeg aldri kommet i mål med oppgaven
 (tidsklemma er like reel for meg som den er for andre og livet mitt er bare en lang rekke deadlines som løper alt for fort),
 merker at jeg er veldig avhengig av å få forklart ting med teskjed og da er det hyggelig å ha et program som aldri blir lei når jeg spør "hvorfor er det sånn, hvorfor gjør vi sånn, hvorfor, hvorfor, hvorfor". Merker at den typen avhengighet av et hjelpemiddel kan ta bort mye mestringsfølelse og det ender veldig fort opp med å amplifisere impostersyndrom og dårlige selvtanker rundt egen prestasjonsevne.
-Jeg aner ikke hvor mye utviklere lener seg på AI i hverdagen, jeg vet bare hvor utrolig fortapt jeg følte meg når internett datt ut og jeg måtte lete etter svarene i notatbøkene mine: AI er et tveegget sverd og det merkes veldig. Eier jeg virkelig like mye lærdom når jeg spør AI om råd, som når jeg leser og leter meg frem til svaret selv på nett eller i notatbøkene mine.
+Jeg aner ikke hvor mye utviklere lener seg på AI i hverdagen, jeg vet bare hvor utrolig fortapt jeg følte meg når internett datt ut og jeg måtte lete etter svarene i notatbøkene mine: AI er et tveegget sverd og det merkes veldig. Eier jeg virkelig like mye lærdom når jeg spør AI om råd, som når jeg leser og leter meg frem til svaret i kompendium eller i notatbøkene mine.
 Er den tiden jeg sparer på å spørre chat gpt "hvorfor gjør vi sånn her, eller hvorfor vil ikke dette virke når jeg har gjort slik" verdt det. Burde jeg egentlig gå helt tilbake til basic med badeanda mi, eller burde jeg levere oppgaven til tidsfristen.
 Jeg tenker at så lenge jeg selv forstår hva jeg driver med, og så lenge jeg er klar over hvor svakhetene mine ligger så er det ok.
 (Også er det jo ikke sånn at alle råd er gode så det er viktig å vite hvorfor vi gjør det vi gjør uten å støtte seg 100% på noe som ike alltid er rett).
