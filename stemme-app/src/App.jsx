@@ -16,13 +16,21 @@ function App() {
   const addCandidate = () => {
     if (newCandidateName.trim()) {
       const newCandidate = {
-        id: Date.now(), //tidsstempel for id
+        id: Date.now(), //tidsstempel for id, her kunne jeg kanskje gått for maxId + 1 isteden også
         name: newCandidateName,
         upvotes: 0,
         downvotes: 0,
       };
       setCandidates([...candidates, newCandidate]);
       setNewCandidateName("");
+
+      //Error-håndtering for id som kræsjer:
+      const idExists = candidates.some((candidate) => candidate.id === newID);
+      if (idExists) {
+        console.error("ID-konflikt oppdaget! Din kandidat ble ikke lagt til");
+        alert("ID-konflikt, kan ikke legge til denne kandidaten");
+        return;
+      }
     }
   };
   //navnendring på kandidat:
@@ -35,6 +43,11 @@ function App() {
   };
   //redigering av navn på kandidat:
   const handleEdit = (id, newName) => {
+    if (!newName.trim()) {
+      alert("Du må fylle inn navn på kandidaten din!");
+      console.error("Navn på kandidaten er ikke fylt inn");
+      return;
+    }
     setCandidates((prevCandidates) =>
       prevCandidates.map((candidate) =>
         candidate.id === id ? { ...candidate, name: newName } : candidate
